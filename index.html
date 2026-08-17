@@ -424,4 +424,467 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:900
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-image{
+    height:610px;
+    min-height:0;
+  }
+
+  .hero-content{
+    margin-top:-210px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .review-box,
+  .contact-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:calc(100% - 20px);
+  }
+
+  .nav{
+    min-height:75px;
+  }
+
+  .brand img{
+    width:140px;
+    height:55px;
+  }
+
+  .call-button{
+    padding:13px 15px;
+    font-size:12px;
+  }
+
+  .hero-image{
+    height:600px;
+    border-radius:0 0 20px 20px;
+  }
+
+  .hero-image img{
+    height:128%;
+    top:-15%;
+  }
+
+  .hero-content{
+    margin-top:-220px;
+    padding:0 18px 25px;
+  }
+
+  h1{
+    font-size:clamp(40px,11vw,56px);
+    letter-spacing:-1.5px;
+  }
+
+  .hero-copy{
+    font-size:16px;
+  }
+
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .primary,
+  .secondary{
+    padding:14px 8px;
+    font-size:13px;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-item{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding:15px;
+  }
+
+  .trust-item:last-child{
+    border-bottom:0;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    padding:28px 20px;
+  }
+
+  .contact-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    width:100%;
+  }
+
+  .big-phone,
+  .email-button{
+    width:100%;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="Unlock & Key logo">
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#reviews">REVIEWS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a class="call-button" href="tel:+447961892189">
+      ☎ CALL NOW
+    </a>
+
+  </div>
+</header>
+
+<main id="home">
+
+<!-- HERO -->
+
+<div class="container hero">
+
+  <div class="hero-image">
+    <img src="hero-key.jpg" alt="Key in a door lock">
+  </div>
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      TRUSTED. RELIABLE. PROFESSIONAL.
+    </div>
+
+    <h1>
+      YOUR SECURITY<br>
+      IS OUR <span>PRIORITY.</span>
+    </h1>
+
+    <p class="hero-copy">
+      Local, reliable and professional locksmith services you can count on.
+      Fast help when you need it, with your security treated as our priority.
+    </p>
+
+    <div class="hero-actions">
+      <a class="primary" href="tel:+447961892189">
+        ☎ CALL NOW
+      </a>
+
+      <a class="secondary" href="#services">
+        VIEW SERVICES
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- TRUST -->
+
+<div class="trust-strip">
+
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <strong>FAST RESPONSE</strong>
+      <span>Help when you need it</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>PROFESSIONAL</strong>
+      <span>Reliable locksmith service</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>SECURITY FIRST</strong>
+      <span>Your property matters</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-photo">
+      <img src="logo.png" alt="Unlock & Key">
+    </div>
+
+    <div class="about-copy">
+
+      <div class="eyebrow">
+        ABOUT UNLOCK &amp; KEY
+      </div>
+
+      <h2>
+        LOCAL HELP YOU CAN TRUST.
+      </h2>
+
+      <p>
+        Unlock &amp; Key provides dependable locksmith services
+        with a straightforward, professional approach.
+      </p>
+
+      <p>
+        Whether you are locked out, need a lock changed or want
+        to improve your property's security, we are here to help.
+      </p>
+
+      <div class="check-list">
+
+        <div class="check">
+          ✓ Professional service
+        </div>
+
+        <div class="check">
+          ✓ Reliable and security-focused
+        </div>
+
+        <div class="check">
+          ✓ Clear, friendly support
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        OUR SERVICES
+      </div>
+
+      <h2>
+        LOCKSMITH SERVICES WHEN YOU NEED THEM.
+      </h2>
+
+      <p>
+        Practical help for common lock and security problems.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="card">
+        <div class="icon">🔑</div>
+        <h3>Emergency Lockouts</h3>
+        <p>
+          Fast help when you are locked out and need access
+          to your property.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔒</div>
+        <h3>Lock Changes</h3>
+        <p>
+          Replace worn, damaged or unsuitable locks and
+          improve your security.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏠</div>
+        <h3>Home Security</h3>
+        <p>
+          Practical locksmith support to help keep your
+          home secure.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚪</div>
+        <h3>Door Locks</h3>
+        <p>
+          Help with door lock problems, replacements
+          and adjustments.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🗝️</div>
+        <h3>Key Services</h3>
+        <p>
+          Assistance with keys and everyday access problems.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>Security Upgrades</h3>
+        <p>
+          Upgrade your locks and strengthen your property's
+          protection.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews" class="reviews">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        CUSTOMER FEEDBACK
+      </div>
+
+      <h2>
+        YOUR EXPERIENCE MATTERS.
+      </h2>
+
+      <p>
+        Have you used Unlock &amp; Key?
+        We would love to hear how we did.
+      </p>
+
+    </div>
+
+    <div class="review-box">
+
+      <div>
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Leave your feedback and help other customers
+          choose a locksmith they can trust.
+        </p>
+
+      </div>
+
+      <a class="review-link" href="reviews.html">
+        LEAVE A REVIEW →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div>
+
+        <div class="eyebrow">
+          GET IN TOUCH
+        </div>
+
+        <h2>
+          NEED A LOCKSMITH?
+        </h2>
+
+        <p>
+          Call Unlock &amp; Key for professional locksmith help.
+        </p>
+
+      </div>
+
+      <div class="contact-actions">
+
+        <a class="big-phone" href="tel:+447961892189">
+          ☎ 07961 892 189
+        </a>
+
+        <a class="email-button"
+           href="mailto:unlockandkeylocksmith@gmail.com">
+          EMAIL US
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © 2026 Unlock &amp; Key · Professional Locksmith Services
+    </span>
+
+    <a href="#home">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
