@@ -833,22 +833,22 @@ footer{
 
     <!-- MYJOBQUOTE WIDGET -->
 
-    <div class="mjq-container">
+    <div style="margin-top:30px; background:#fff; border-radius:18px; padding:20px;">
+  <div id="mjq-widget"></div>
+</div>
 
-      <div id="mjq-widget"></div>
+<script src="https://www.myjobquote.co.uk/js/widget.js"></script>
 
-      <script src="https://www.myjobquote.co.uk/js/widget.js"></script>
-
-      <script>
-      (new MyJobQuoteWidget).init({
-        targetId: 'mjq-widget',
-        userId: 'usr_1j83u3larr1yhp2zctb0pygxvyne',
-        theme: 'white-bg',
-        badgeName: 'myjobquote-standard-logo-with-tick'
-      });
-      </script>
-
-    </div>
+<script>
+window.addEventListener('load', function () {
+  (new MyJobQuoteWidget).init({
+    targetId: 'mjq-widget',
+    userId: 'usr_1j83u3larr1yhp2zctb0pygxvyne',
+    theme: 'white-bg',
+    badgeName: 'myjobquote-standard-logo-with-tick'
+  });
+});
+</script>
 
   </div>
 
