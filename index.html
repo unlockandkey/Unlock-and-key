@@ -1,933 +1,593 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#030609">
-<title>Unlock & Key | Professional Locksmith</title>
-<meta name="description" content="Unlock & Key professional locksmith services.">
-
-<style>
-:root{
-  --bg:#030609;
-  --surface:#080d12;
-  --gold:#c9962d;
-  --gold2:#e5b44d;
-  --text:#fff;
-  --muted:#aeb4bc;
-  --line:rgba(255,255,255,.09);
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  display:block;
-  max-width:100%;
-}
-
-.container{
-  width:min(1160px,calc(100% - 24px));
-  margin:auto;
-}
-
-/* HEADER */
-
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#030609;
-  border-bottom:1px solid var(--line);
-}
-
-.nav{
-  min-height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-}
-
-.brand img{
-  width:150px;
-  height:60px;
-  object-fit:contain;
-}
-
-.nav-links{
-  display:flex;
-  gap:22px;
-  margin-left:auto;
-}
-
-.nav-links a{
-  font-size:12px;
-  font-weight:800;
-  color:#c2c7cd;
-}
-
-.call-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background:#6f1e00;
-  color:#fff;
-  padding:14px 18px;
-  border-radius:14px;
-  font-size:13px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
-/* HERO */
-
-.hero{
-  padding-bottom:55px;
-}
-
-.hero-image{
-  position:relative;
-  width:100%;
-  height:650px;
-  overflow:hidden;
-  background:#080d12;
-  border-radius:0 0 28px 28px;
-}
-
-.hero-image img{
-  position:absolute;
-  width:100%;
-  height:125%;
-  top:-14%;
-  left:0;
-  max-width:none;
-  object-fit:cover;
-  object-position:center center;
-}
-
-.hero-image:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.05) 0%,
-      rgba(0,0,0,.12) 35%,
-      rgba(2,5,8,.96) 100%
-    );
-  pointer-events:none;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  margin-top:-235px;
-  padding:0 28px 30px;
-  max-width:900px;
-}
-
-.eyebrow{
-  color:var(--gold2);
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:2.5px;
-  margin-bottom:14px;
-}
-
-h1{
-  font-size:clamp(42px,7vw,76px);
-  line-height:.98;
-  letter-spacing:-2px;
-  margin-bottom:20px;
-}
-
-h1 span{
-  color:var(--gold2);
-}
-
-.hero-copy{
-  color:#c9ced4;
-  font-size:17px;
-  max-width:700px;
-  margin-bottom:24px;
-}
-
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.primary,
-.secondary{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:15px 23px;
-  border-radius:12px;
-  font-weight:900;
-}
-
-.primary{
-  background:#7a2200;
-}
-
-.secondary{
-  border:1px solid rgba(229,180,77,.5);
-  background:rgba(3,6,9,.85);
-}
-
-/* TRUST */
-
-.trust-strip{
-  background:#070b10;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-}
-
-.trust-item{
-  text-align:center;
-  padding:20px;
-  border-right:1px solid var(--line);
-}
-
-.trust-item:last-child{
-  border-right:0;
-}
-
-.trust-item strong{
-  display:block;
-  font-size:14px;
-}
-
-.trust-item span{
-  font-size:12px;
-  color:var(--muted);
-}
-
-/* SECTIONS */
-
-section{
-  padding:70px 0;
-}
-
-.section-heading{
-  max-width:720px;
-  margin-bottom:32px;
-}
-
-h2{
-  font-size:clamp(32px,5vw,48px);
-  line-height:1.08;
-  margin-bottom:12px;
-}
-
-.section-heading p{
-  color:var(--muted);
-}
-
-/* ABOUT */
-
-.about-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:45px;
-  align-items:center;
-}
-
-.about-photo{
-  min-height:300px;
-  border-radius:22px;
-  border:1px solid var(--line);
-  background:#080d12;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:25px;
-}
-
-.about-photo img{
-  width:270px;
-  max-height:190px;
-  object-fit:contain;
-}
-
-.about-copy p{
-  color:var(--muted);
-  margin-bottom:15px;
-}
-
-.check-list{
-  display:grid;
-  gap:10px;
-  margin-top:20px;
-}
-
-.check{
-  font-weight:700;
-  font-size:14px;
-}
-
-/* SERVICES */
-
-.services,
-.reviews{
-  background:#070c11;
-}
-
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.card{
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:17px;
-  padding:25px;
-}
-
-.icon{
-  font-size:25px;
-  margin-bottom:14px;
-}
-
-.card h3{
-  font-size:19px;
-  margin-bottom:8px;
-}
-
-.card p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* REVIEWS */
-
-.review-box{
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:28px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.stars{
-  color:var(--gold2);
-  letter-spacing:3px;
-  font-size:18px;
-}
-
-.review-box p{
-  color:var(--muted);
-  margin-top:5px;
-}
-
-.review-link{
-  border:1px solid rgba(229,180,77,.45);
-  padding:13px 18px;
-  border-radius:9px;
-  font-weight:800;
-  white-space:nowrap;
-}
-
-/* MYJOBQUOTE */
-
-.mjq-container{
-  margin-top:30px;
-  background:#fff;
-  border-radius:18px;
-  padding:20px;
-  overflow:hidden;
-}
-
-/* CONTACT */
-
-.contact-box{
-  background:#080d12;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:38px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.contact-box p{
-  color:var(--muted);
-}
-
-.contact-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.big-phone,
-.email-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:10px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
-.big-phone{
-  background:var(--gold);
-  color:#080b0e;
-  padding:16px 20px;
-}
-
-.email-button{
-  border:1px solid var(--line);
-  padding:15px 18px;
-}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--line);
-  padding:28px 0;
-  color:#7f8994;
-  font-size:12px;
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  .nav-links{
-    display:none;
-  }
-
-  .hero-image{
-    height:610px;
-    min-height:0;
-  }
-
-  .hero-content{
-    margin-top:-210px;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .review-box,
-  .contact-box{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-@media(max-width:600px){
-
-  .container{
-    width:calc(100% - 20px);
-  }
-
-  .nav{
-    min-height:75px;
-  }
-
-  .brand img{
-    width:140px;
-    height:55px;
-  }
-
-  .call-button{
-    padding:13px 15px;
-    font-size:12px;
-  }
-
-  .hero-image{
-    height:600px;
-    border-radius:0 0 20px 20px;
-  }
-
-  .hero-image img{
-    height:128%;
-    top:-15%;
-  }
-
-  .hero-content{
-    margin-top:-220px;
-    padding:0 18px 25px;
-  }
-
-  h1{
-    font-size:clamp(40px,11vw,56px);
-    letter-spacing:-1.5px;
-  }
-
-  .hero-copy{
-    font-size:16px;
-  }
-
-  .hero-actions{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-  }
-
-  .primary,
-  .secondary{
-    padding:14px 8px;
-    font-size:13px;
-  }
-
-  .trust-grid{
-    grid-template-columns:1fr;
-  }
-
-  .trust-item{
-    border-right:0;
-    border-bottom:1px solid var(--line);
-    padding:15px;
-  }
-
-  .trust-item:last-child{
-    border-bottom:0;
-  }
-
-  section{
-    padding:60px 0;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-box{
-    padding:28px 20px;
-  }
-
-  .contact-actions{
-    display:grid;
-    grid-template-columns:1fr;
-    width:100%;
-  }
-
-  .big-phone,
-  .email-button{
-    width:100%;
-  }
-
-  .footer-inner{
-    flex-direction:column;
-  }
-
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Unlock & Key | Locksmith Birmingham</title>
+  <meta name="description" content="Unlock & Key provides locksmith services across Birmingham and surrounding areas. Lockouts, lock changes, lock upgrades and uPVC door lock repairs. Call today.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1424;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: #07101e;
+      border-bottom: 1px solid #c9a34a;
+      padding: 15px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .logo h1 {
+      font-size: 22px;
+      color: #d7b45a;
+    }
+
+    .logo p {
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d7b45a;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .gold {
+      background: #d7b45a;
+      color: #101827;
+    }
+
+    .outline {
+      border: 1px solid #d7b45a;
+      color: #f5f5f5;
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: #07101e;
+    }
+
+    .hero {
+      padding: 75px 0;
+      background:
+        linear-gradient(rgba(7, 16, 30, 0.83), rgba(7, 16, 30, 0.95)),
+        url("hero-key.jpg") center/cover no-repeat;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 span {
+      color: #d7b45a;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #e0e0e0;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .trust-line {
+      margin-top: 25px;
+      color: #d7b45a;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: #d7b45a;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #ccc;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #121f33;
+      border: 1px solid #26364d;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .service-card h3 {
+      color: #d7b45a;
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: #ddd;
+      font-size: 15px;
+    }
+
+    .service-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .highlight {
+      background: #101d30;
+      border-top: 1px solid #26364d;
+      border-bottom: 1px solid #26364d;
+    }
+
+    .review-panel {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background: #121f33;
+      border: 1px solid #26364d;
+      border-radius: 14px;
+      padding: 30px 20px;
+    }
+
+    .review-panel h3 {
+      color: #d7b45a;
+      margin-bottom: 12px;
+    }
+
+    .review-panel p {
+      color: #ddd;
+      margin-bottom: 22px;
+    }
+
+    .review-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: #121f33;
+      border: 1px solid #26364d;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      color: #d7b45a;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin-bottom: 15px;
+      overflow-wrap: anywhere;
+    }
+
+    .service-area {
+      text-align: center;
+      color: #ddd;
+      margin-top: 25px;
+    }
+
+    footer {
+      background: #07101e;
+      border-top: 1px solid #c9a34a;
+      padding: 25px 0;
+      text-align: center;
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #d7b45a;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        max-width: 330px;
+        margin: auto;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .section-title h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-
-    <a href="#home" class="brand">
-      <img src="logo.png" alt="Unlock & Key logo">
-    </a>
-
-    
-
-<nav class="nav-links">
-  <a href="#home">HOME</a>
-  <a href="#about">ABOUT</a>
-  <a href="#services">SERVICES</a>
-  <a href="#reviews">REVIEWS</a>
-  <a href="#contact">CONTACT</a>
-  <a class="secondary"
-     href="https://wa.me/447961892189?text=Hi%20Unlock%20%26%20Key%2C%20I%20need%20a%20locksmith."
-     target="_blank" rel="noopener">
-    WHATSAPP US
-  </a>
-</nav>
-
-<a class="call-button" href="tel:+447961892189">
-  ☎ CALL NOW
-</a>
-
-
-  </div>
-</header>
-
-<main id="home">
-
-<!-- HERO -->
-
-<div class="container hero">
-
-  <div class="hero-image">
-    <img src="hero-key.jpg" alt="Key in a door lock">
-  </div>
-
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      TRUSTED. RELIABLE. PROFESSIONAL.
-    </div>
-
-    <h1>
-      YOUR SECURITY<br>
-      IS OUR <span>PRIORITY.</span>
-    </h1>
-
-    <p class="hero-copy">
-      Local, reliable and professional locksmith services you can count on.
-      Fast help when you need it, with your security treated as our priority.
-    </p>
-
-   
-<div style="display:flex; flex-wrap:wrap; gap:12px;">
-  <a class="review-link"
-     href="https://share.google/qq03HUL3HCWbLC1kk"
-     target="_blank" rel="noopener">
-    READ GOOGLE REVIEWS →
-  </a>
-
-  <a class="review-link"
-     href="https://g.page/r/CT4C8M_6OvccECE/review"
-     target="_blank" rel="noopener">
-    LEAVE A GOOGLE REVIEW →
-  </a>
-</div>
-
-
-  </div>
-
-</div>
-
-<!-- TRUST -->
-
-<div class="trust-strip">
-
-  <div class="container trust-grid">
-
-    <div class="trust-item">
-      <strong>FAST RESPONSE</strong>
-      <span>Help when you need it</span>
-    </div>
-
-    <div class="trust-item">
-      <strong>PROFESSIONAL</strong>
-      <span>Reliable locksmith service</span>
-    </div>
-
-    <div class="trust-item">
-      <strong>SECURITY FIRST</strong>
-      <span>Your property matters</span>
-    </div>
-
-  </div>
-
-</div>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-  <div class="container about-grid">
-
-    <div class="about-photo">
-      <img src="logo.png" alt="Unlock & Key">
-    </div>
-
-    <div class="about-copy">
-
-      <div class="eyebrow">
-        ABOUT UNLOCK &amp; KEY
-      </div>
-
-      <h2>
-        LOCAL HELP YOU CAN TRUST.
-      </h2>
-
-      <p>
-        Unlock &amp; Key provides dependable locksmith services
-        with a straightforward, professional approach.
-      </p>
-
-      <p>
-        Whether you are locked out, need a lock changed or want
-        to improve your property's security, we are here to help.
-      </p>
-
-      <div class="check-list">
-
-        <div class="check">
-          ✓ Professional service
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="#home">
+        <img src="logo.png" alt="Unlock & Key locksmith logo">
+        <div>
+          <h1>Unlock & Key</h1>
+          <p>Professional Locksmith Services</p>
         </div>
-
-        <div class="check">
-          ✓ Reliable and security-focused
-        </div>
-
-        <div class="check">
-          ✓ Clear, friendly support
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services" class="services">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        OUR SERVICES
-      </div>
-
-      <h2>
-        LOCKSMITH SERVICES WHEN YOU NEED THEM.
-      </h2>
-
-      <p>
-        Practical help for common lock and security problems.
-      </p>
-
-    </div>
-
-    <div class="service-grid">
-
-      <div class="card">
-        <div class="icon">🔑</div>
-        <h3>Emergency Lockouts</h3>
-        <p>
-          Fast help when you are locked out and need access
-          to your property.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔒</div>
-        <h3>Lock Changes</h3>
-        <p>
-          Replace worn, damaged or unsuitable locks and
-          improve your security.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏠</div>
-        <h3>Home Security</h3>
-        <p>
-          Practical locksmith support to help keep your
-          home secure.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🚪</div>
-        <h3>Door Locks</h3>
-        <p>
-          Help with door lock problems, replacements
-          and adjustments.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🗝️</div>
-        <h3>Key Services</h3>
-        <p>
-          Assistance with keys and everyday access problems.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🛡️</div>
-        <h3>Security Upgrades</h3>
-        <p>
-          Upgrade your locks and strengthen your property's
-          protection.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- REVIEWS -->
-
-<section id="reviews" class="reviews">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        CUSTOMER FEEDBACK
-      </div>
-
-      <h2>
-        YOUR EXPERIENCE MATTERS.
-      </h2>
-
-      <p>
-        Have you used Unlock &amp; Key?
-        We would love to hear how we did.
-      </p>
-
-    </div>
-
-    <div class="review-box">
-
-      <div>
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          Leave your feedback and help other customers
-          choose a locksmith they can trust.
-        </p>
-
-      </div>
-
-      <a class="review-link" href="reviews.html">
-        LEAVE A REVIEW →
       </a>
 
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- MYJOBQUOTE WIDGET -->
-
-    <div style="margin-top:30px; background:#fff; border-radius:18px; padding:20px;">
-  <div id="mjq-widget"></div>
-</div>
-
-<script src="https://www.myjobquote.co.uk/js/widget.js"></script>
-
-<script>
-window.addEventListener('load', function () {
-  (new MyJobQuoteWidget).init({
-    targetId: 'mjq-widget',
-    userId: 'usr_1j83u3larr1yhp2zctb0pygxvyne',
-    theme: 'white-bg',
-    badgeName: 'myjobquote-standard-logo-with-tick'
-  });
-});
-</script>
-
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-  <div class="container">
-
-    <div class="contact-box">
-
-      <div>
-
-        <div class="eyebrow">
-          GET IN TOUCH
-        </div>
-
-        <h2>
-          NEED A LOCKSMITH?
-        </h2>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <h2>Reliable Locksmith Services<br><span>Across Birmingham</span></h2>
 
         <p>
-          Call Unlock &amp; Key for professional locksmith help.
+          Locked out, need a lock changed or want to improve your home security?
+          Unlock & Key provides friendly, reliable locksmith services for homes
+          and businesses across Birmingham and surrounding areas.
         </p>
 
+        <div class="hero-actions">
+          <a class="button gold" href="tel:+447961892189">
+            CALL NOW
+          </a>
+
+          <a class="button outline" href="#services">
+            VIEW SERVICES
+          </a>
+
+          <a class="button whatsapp"
+             href="https://wa.me/447961892189"
+             target="_blank"
+             rel="noopener">
+            MESSAGE ON WHATSAPP
+          </a>
+        </div>
+
+        <div class="trust-line">
+          Local service · Friendly approach · Prices negotiable
+        </div>
       </div>
+    </section>
 
-      <div class="contact-actions">
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Unlock & Key</h2>
+          <p>Your local locksmith, here to help when you need it.</p>
+        </div>
 
-        <a class="big-phone" href="tel:+447961892189">
-          ☎ 07961 892 189
-        </a>
+        <div class="about-content">
+          <p>
+            Unlock & Key is an independent locksmith business serving Birmingham
+            and the surrounding areas. I aim to provide a straightforward,
+            professional service and clear communication from your first enquiry.
+          </p>
 
-        <a class="email-button"
-           href="mailto:unlockandkeylocksmith@gmail.com">
-          EMAIL US
-        </a>
+          <p>
+            Whether you need help with a lockout, a replacement lock or improving
+            the security of your property, get in touch to discuss your needs.
+          </p>
 
+          <p>
+            Not sure what you need? Send me a message and, where possible,
+            a photo of the lock or door so I can help assess the job.
+          </p>
+
+          <a class="button gold" href="https://wa.me/447961892189"
+             target="_blank" rel="noopener">
+            ASK FOR A QUOTE
+          </a>
+        </div>
       </div>
+    </section>
 
+    <section class="highlight" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Locksmith help for everyday problems and security upgrades.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🔑</div>
+            <h3>Emergency Lockouts</h3>
+            <p>
+              Help when you're locked out of your home or property.
+              Contact me to discuss your situation and availability.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <h3>Lock Replacement</h3>
+            <p>
+              Replacement cylinders and locks to help restore security
+              after a lost key, move or lock problem.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3>Lock Upgrades</h3>
+            <p>
+              Discuss options for improving your existing door lock
+              and the security of your property.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🚪</div>
+            <h3>uPVC Door Lock Issues</h3>
+            <p>
+              Assistance with suitable uPVC door lock and alignment
+              problems, subject to inspection.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔐</div>
+            <h3>Key Safes & Padlocks</h3>
+            <p>
+              Ask about key safe installation, padlocks and other
+              suitable security solutions.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🗝️</div>
+            <h3>Key Fob & Card Copies</h3>
+            <p>
+              Get in touch to discuss key fob or access card copying
+              where compatible and authorised.
+            </p>
+          </div>
+        </div>
+
+        <p class="service-area">
+          Serving Birmingham and surrounding areas. Travel, parts and labour
+          costs depend on the job. Please ask for a quote.
+          Discounts may be available for students and older customers.
+        </p>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+          <p>Have I helped you? Your feedback makes a real difference to a small business.</p>
+        </div>
+
+        <div class="review-panel">
+          <h3>Support Unlock & Key</h3>
+
+          <p>
+            Read my Google reviews before getting in touch, or leave a review
+            after your job. Every genuine review helps local customers find me.
+          </p>
+
+          <div class="review-actions">
+            <a class="button gold"
+               href="https://share.google/qq03HUL3HCWbLC1kk"
+               target="_blank" rel="noopener">
+              VIEW GOOGLE BUSINESS PROFILE
+            </a>
+
+            <a class="button outline"
+               href="https://g.page/r/CT4C8M_6OvccECE/review"
+               target="_blank" rel="noopener">
+              LEAVE A GOOGLE REVIEW
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Get in Touch</h2>
+          <p>Contact me to discuss your locksmith needs or request a quote.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Call Me</h3>
+            <p>Speak to me about your job.</p>
+            <a class="button gold" href="tel:+447961892189">
+              07961 892189
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3>WhatsApp</h3>
+            <p>Send a message or a photo of your lock or door.</p>
+            <a class="button whatsapp"
+               href="https://wa.me/447961892189"
+               target="_blank" rel="noopener">
+              MESSAGE ME
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p>Send details of the work you need.</p>
+            <a class="button outline"
+               href="mailto:unlockandkeylocksmith@gmail.com">
+              EMAIL ME
+            </a>
+          </div>
+        </div>
+
+        <p class="service-area">
+          Unlock & Key — Birmingham and surrounding areas.
+          Please contact me to confirm availability and pricing.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Unlock & Key. All rights reserved.</p>
+      <p>Locksmith services across Birmingham and surrounding areas.</p>
+      <p>
+        <a href="https://g.page/r/CT4C8M_6OvccECE/review"
+           target="_blank" rel="noopener">
+          Leave a review
+        </a>
+        &nbsp; | &nbsp;
+        <a href="https://wa.me/447961892189"
+           target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </p>
     </div>
+  </footer>
 
-  </div>
-
-</section>
-
-</main>
-
-<footer>
-
-  <div class="container footer-inner">
-
-    <span>
-      © 2026 Unlock &amp; Key · Professional Locksmith Services
-    </span>
-
-    <a href="#home">
-      BACK TO TOP ↑
-    </a>
-
-  </div>
-
-</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
